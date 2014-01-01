@@ -1,17 +1,7 @@
-.entry{transition:opacity .3s;position:relative}
+.entry{padding-right:40px;transition:opacity .3s;position:relative}
 .is-hidden{display:none!important}
-.is-contracted{padding-top:20px;opacity:.3;cursor:pointer}
-.block_user{
-position: absolute;
-top: 3px;
-right: 5px;
-cursor: copy;
-background-color: #f2f2f2;
-border: 1px solid #ccc;
-height: 20px;
-width: 20px;
-border-radius: 50%;
-color: #666}
-.block_user:before{content:'\2616';text-align: center;display: block}
-.is-contracted .block_user{top:17px;cursor:alias}
+.is-contracted{padding-top:15px;opacity:.3;cursor:pointer}
+.block_user{position:absolute;top:12px;right:5px;cursor:copy;background-color:#f2f2f2;border: 1px solid #ccc;height:20px;width:20px;border-radius:50%;color:#666}
+.block_user:before{content:'\2616';text-align:center;display:block}
+.is-contracted .block_user{cursor:alias}
 .is-blocked .block_user:before{content:'\2617'}
