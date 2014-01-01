@@ -5,7 +5,7 @@
 * find "Personalized Web", make sure it's enabled
 * click on "options" at the Personalized Web-section bottom, right next to "allow in incognito"
 * click "load dump"
-* paste entire content from [`ragsrant_dump.json`](https://raw.github.com/jnaO/ranger_rants/master/ragsrant_dump.json) into the field in the popup
+* paste entire content of [`ragsrant_dump.json`](https://raw.github.com/jnaO/ranger_rants/master/ragsrant_dump.json) into the field in the popup
 * click ok
 
 
