@@ -1,6 +1,6 @@
 # What is this?
 
-This is a small script that runs locally in your browser. I created it to enable sort of a "troll-block-list" after getting tired of trolls in the comment section on my [favourite hockey blog, Ranger Rants](http://blogs.northjersey.com/blogs/rangerrants/ "Ranger Rants"). This script will only work on thas site.
+This is a small script that runs locally in your browser. I created it to enable sort of a "troll-block-list" after getting tired of trolls in the comment section on my [favourite hockey blog, Ranger Rants](http://blogs.northjersey.com/blogs/rangerrants/ "Ranger Rants"). This script will only work on that site.
 
 Users added to the "blocked users"-list will be stored in your browsers localStorage. Hence, if you browse the site from a different browser(/computer) than the one you blocked a user on, the user will not appear as blocked in that browser.
 No data is neither stored by me nor sent to me.
