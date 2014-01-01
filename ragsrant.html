@@ -1,0 +1,89 @@
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+var cps = {
+  addUser: function  (user) {
+    var currently_blocked = window.localStorage.getItem('blocked_users'),
+        added_user = [];
+    if (currently_blocked) {
+      added_user = currently_blocked.split(',');
+    }
+    if ( $.inArray( user, added_user ) !== -1 ) {
+      return;
+    }
+    added_user.push(user);
+    window.localStorage.setItem('blocked_users', added_user);
+    cps.hideUser(user);
+  },
+  removeUser: function (user) {
+    var currently_blocked = window.localStorage.getItem('blocked_users'),
+        removed_user = currently_blocked.split(',');
+    removed_user.splice(removed_user.indexOf(user), 1);
+    if ( removed_user.length ) {
+      window.localStorage.setItem('blocked_users', removed_user);
+    } else {
+      window.localStorage.removeItem('blocked_users');
+    }
+    cps.showUser(user);
+  },
+  addRemoveUser: function (e) {
+    var p = $(e.target).parents('.entry'),
+        usr = $(e.target).attr('data-_user');
+    if ( $(p).is('.is-blocked') ) {
+      cps.removeUser(usr);
+    } else {
+      cps.addUser(usr);
+    }
+  },
+  hideUser: function (user) {
+    var $entry = $('.entry').filter(function () { var re = new RegExp(user); return re.test( $(this).find('.posted').text() ); });
+    $entry.addClass('is-contracted is-blocked').find('p').addClass('is-hidden');
+
+    $entry.off('click');
+
+    $entry.on('click', function (e) {
+      if ( $(e.target).is('.block_user') ) {
+        cps.addRemoveUser(e);
+      } else {
+        $(this).find('p').toggleClass('is-hidden');
+        $(this).toggleClass('is-contracted');
+      }
+    })
+  },
+  showUser: function (user) {
+    var $entry = $('.entry').filter(function () { var re = new RegExp(user); return re.test( $(this).find('.posted').text() ); });
+    $entry.removeClass('is-contracted is-blocked').find('p').removeClass('is-hidden');
+
+    $entry.off('click');
+
+    $entry.on('click', '.block_user', cps.addRemoveUser);
+  }
+}
+
+setTimeout(function () {
+  var disabled = window.localStorage.getItem('blocked_users');
+
+  $('.entry').each(function(index, t){
+
+    if ( index === 0 || $(this).find('.posted').length === 0 ) {
+      return;
+    }
+
+    var auth = $(t).find('.posted'),
+        username = $(auth).text().match('Posted by .*? on').toString().replace('Posted by', '').replace('on', '').trim()
+        $icon = $('<div class="block_user" />').attr('data-_user', username);
+
+    $(this).prepend($icon);
+    $(this).on('click', '.block_user', cps.addRemoveUser);
+  });
+
+
+  if (!!disabled) {
+    disabled = disabled.split(',');
+    for (var i = disabled.length - 1; i >= 0; i--) {
+      cps.hideUser(disabled[i]);
+    };
+  }
+
+
+}, 500);
+</script>
