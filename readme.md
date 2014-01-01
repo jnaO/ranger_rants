@@ -1,9 +1,9 @@
 # What is this?
 
-This is a small script that runs locally in your browser. I created it to enable sort of a "troll-block-list" after getting tired of trolls in the comment section. Users added to the "blocked users"-list will be stored in a list in you browsers localStorage, hence, if you browse the site from a different browser(/computer) than the one you blocked a user on, the user will not appear as blocked on that browser.
+This is a small script that runs locally in your browser. I created it to enable sort of a "troll-block-list" after getting tired of trolls in the comment section. Users added to the "blocked users"-list will be stored in your browsers localStorage. Hence, if you browse the site from a different browser(/computer) than the one you blocked a user on, the user will not appear as blocked in that browser.
 No data is neither stored by me nor sent to me.
 
-This script is dependent Google Chrome browser and a third party chrome extension called "Personalized Web". This extension will need some permissions to alter web pages on your behalf.
+This script is dependent on the Google Chrome browser and a third party chrome extension called "Personalized Web". This extension will need some permissions to alter web pages on your behalf.
 
 
 # Usage
