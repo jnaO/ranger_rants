@@ -25,7 +25,7 @@ Now you can toggle the comment by clicking on the comment (anywhere but on the i
 
 Solid icon top right indicate that the user is on your blocked list.
 
-![blocked users](https://www.dropbox.com/s/rv6jz80fgbps4dp/Screenshot%202014-01-01%2022.52.39.png)
+![blocked users](screenshot.png)
 
 
 # License
