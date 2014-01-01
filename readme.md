@@ -6,7 +6,7 @@ No data is neither stored by me nor sent to me.
 This script is dependent on the Google Chrome browser and a third party chrome extension called "Personalized Web". This extension will need some permissions to alter web pages on your behalf.
 
 
-# Usage
+## Installation
 
 * Install the chrome browser extension "[Personalized Web"(https://chrome.google.com/webstore/detail/personalized-web/plcnnpdmhobdfbponjpedobekiogmbco)".
 * In your chrome browser, go to chrome://extensions/ (copy and paste into your address field)
@@ -15,6 +15,17 @@ This script is dependent on the Google Chrome browser and a third party chrome e
 * click "load dump"
 * paste entire content of [`ragsrant_dump.json`](https://raw.github.com/jnaO/ranger_rants/master/ragsrant_dump.json) into the field in the popup
 * click ok
+
+
+## Usage
+
+After the script is installed you will get a new icon top right on every comment post. If you click that icon, you will toggle the blocked status of the user whom written the comment. The comment will then be folded, leaving only the user name visible in a semi opaque comment box.
+
+Now you can toggle the comment by clicking on the comment (anywhere but on the icon top right), and the comment will become visible. Click again to hide.
+
+Solid icon top right indicate that the user is on your blocked list.
+
+![blocked users](https://www.dropbox.com/s/rv6jz80fgbps4dp/Screenshot%202014-01-01%2022.52.39.png)
 
 
 # License
