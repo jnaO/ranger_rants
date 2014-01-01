@@ -12,11 +12,11 @@ This script is dependent on the Google Chrome browser and a third party chrome e
 
 * Install the chrome browser extension "[Personalized Web](https://chrome.google.com/webstore/detail/personalized-web/plcnnpdmhobdfbponjpedobekiogmbco)".
 * In your chrome browser, go to chrome://extensions/ (copy and paste into your address field)
-* find "Personalized Web", make sure it's enabled
-* click on "options" at the bottom of the Personalized Web-section, right next to "allow in incognito"
-* click "load dump"
-* paste entire content of [`ragsrant_dump.json`](https://raw.github.com/jnaO/ranger_rants/master/ragsrant_dump.json) into the field in the popup
-* click ok
+* Find "Personalized Web", make sure it's enabled
+* Click on "options" at the bottom of the Personalized Web-section, right next to "allow in incognito"
+* Click "load dump"
+* Copy entire content of [`ragsrant_dump.json`](https://raw.github.com/jnaO/ranger_rants/master/ragsrant_dump.json) and paste it into the field in the popup
+* Click ok
 
 
 ## Usage
