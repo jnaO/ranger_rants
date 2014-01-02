@@ -56,34 +56,36 @@ var cps = {
     $entry.off('click');
 
     $entry.on('click', '.block_user', cps.addRemoveUser);
+  },
+  addHtml: function (callback) {
+    $('.entry').each(function(index, t){
+      if ( index === 0 || $(this).find('.posted').length === 0 ) {
+        return;
+      }
+      var auth = $(t).find('.posted'),
+          username = $(auth).text().match('Posted by .*? on').toString().replace('Posted by', '').replace('on', '').trim()
+          $icon = $('<div class="block_user" />').attr('data-_user', username);
+
+      $(this).prepend($icon);
+      $(this).on('click', '.block_user', cps.addRemoveUser);
+    });
+    callback();
+  },
+  hideBlockedUsers: function () {
+    var disabled = window.localStorage.getItem('blocked_users');
+    if (!!disabled) {
+      disabled = disabled.split(',');
+      for (var i = disabled.length - 1; i >= 0; i--) {
+        cps.hideUser(disabled[i]);
+      };
+    }
+  },
+  initialSetup: function () {
+    cps.addHtml(cps.hideBlockedUsers);
   }
 }
 
 setTimeout(function () {
-  var disabled = window.localStorage.getItem('blocked_users');
-
-  $('.entry').each(function(index, t){
-
-    if ( index === 0 || $(this).find('.posted').length === 0 ) {
-      return;
-    }
-
-    var auth = $(t).find('.posted'),
-        username = $(auth).text().match('Posted by .*? on').toString().replace('Posted by', '').replace('on', '').trim()
-        $icon = $('<div class="block_user" />').attr('data-_user', username);
-
-    $(this).prepend($icon);
-    $(this).on('click', '.block_user', cps.addRemoveUser);
-  });
-
-
-  if (!!disabled) {
-    disabled = disabled.split(',');
-    for (var i = disabled.length - 1; i >= 0; i--) {
-      cps.hideUser(disabled[i]);
-    };
-  }
-
-
+  cps.initialSetup();
 }, 500);
 </script>
