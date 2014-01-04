@@ -30,6 +30,7 @@ Solid icon top right indicate that the user is on your blocked list.
 ![blocked users](screenshot.png)
 
 
+
 # License
 
 The MIT License (MIT)
