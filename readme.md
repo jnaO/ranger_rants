@@ -21,7 +21,7 @@ This script is dependent on the Google Chrome browser and a third party chrome e
 
 ## Usage
 
-After the script is installed you will get a new icon top right on every comment post. If you click that icon, you will toggle the blocked status of the user whom written the comment. The comment will then be folded, leaving only the user name visible in a semi opaque comment box.
+After the script is installed you will get a new icon top right on every comment post. If you click that icon, you will toggle the blocked status of the user who written the comment. The comment will then be folded, leaving only the user name visible in a semi opaque comment box.
 
 Now you can toggle the comment by clicking on the comment (anywhere but on the icon top right), and the comment will become visible. Click again to hide.
 
